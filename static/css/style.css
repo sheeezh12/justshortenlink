@@ -1,0 +1,12 @@
+:root {
+    --black:#000505;
+    --cadet:#3b3355;
+    --violet:#5D5D81;
+    --blue:#BFCDE0;
+    --white:#FEFCFD;
+}
+
+body {
+    background-color: var(--blue);
+    font-family: 'Nunito', sans-serif;
+}
