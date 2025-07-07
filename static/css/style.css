@@ -1,12 +1,130 @@
 :root {
-    --black:#000505;
-    --cadet:#3b3355;
-    --violet:#5D5D81;
-    --blue:#BFCDE0;
-    --white:#FEFCFD;
+    --bg-primary: #F9FAFC;
+    --text-primary: #1C1C1E;
+    --text-muted: #7A7A8C;
+    --accent: #5F6FFF;
+    --accent-alt: #FF8FAB;
+    --button-hover: #4950FF;
+    --border: #E3E4EB;
 }
 
 body {
-    background-color: var(--blue);
-    font-family: 'Nunito', sans-serif;
+   
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--text-primary);
+}
+
+header, section, footer {
+    padding: 4rem 2rem;
+    margin: auto;
+}
+
+section {
+    max-width: 960px;
+}
+
+header {
+    text-align: center;
+    background-color: var(--accent-alt);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: var(--text-primary);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+header p {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+header::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent);
+  margin: 2rem auto 0;
+  border-radius: 2px;
+}
+
+#cara-kerja {
+    padding-top: 10px;
+}
+
+#cara-kerja h2,
+#shorten-part h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+#cara-kerja ul {
+    list-style: none;
+    padding: 0;
+    color: var(--text-muted);
+}
+
+#cara-kerja li::before {
+    content: "✔️ ";
+    color: var(--accent);
+}
+
+#shorten-part input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+#shorten-part button {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    transform: translateY(0);
+
+}
+
+#shorten-part button:hover {
+    transform: translateY(-2px);
+    background-color: var(--button-hover);
+}
+
+#shorten-part i {
+    margin-right: 0.5rem;
+}
+
+#shorten-part {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(95, 111, 255, 0.08);
+  border: 1px solid var(--border);
+}
+
+#shorten-part input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(95, 111, 255, 0.15);
+}
+
+footer {
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    background-color: var(--accent-alt);
+    padding: 2.5rem 1rem;
+   
 }
