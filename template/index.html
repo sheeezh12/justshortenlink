@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DisposeLink</title>
+    <title>ShortenLink</title>
 
     <!-- Bootstrap 5.3.7 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
@@ -25,7 +25,7 @@
 <body>
     <!-- HEADER -->
     <header id="header">
-        <h1>DisposeLink</h1>
+        <h1>ShortenLink</h1>
         <p>Link it, use it, lose it</p>
     </header>
 
@@ -36,17 +36,17 @@
 
     <!-- CARA KERJA -->
     <section id="cara-kerja">
-        <h2>Cara Kerja</h2>
+        <h2>The steps</h2>
         <ul>
-            <li>Masukkan link panjang kamu ke kolom input</li>
-            <li>Sistem kami memproses dan mengamankan link</li>
-            <li>Link pendek langsung bisa kamu salin dan pakai</li>
+            <li>Enter your long link into the input field</li>
+            <li>Our system processes and secures the link</li>
+            <li>You can immediately copy and use the shortened link</li>
         </ul>
     </section>
 
     <!-- SHORTEN LINK -->
     <section id="shorten-part">
-        <h2>Pendekkan Link Kamu</h2>
+        <h2>Shorten your link here</h2>
         <form method="POST" action="/shorten">
             <input type="text" class="form-control" id="original-link" name="original-link" required placeholder="https://link-panjang-kamu.com" />
     
@@ -81,11 +81,11 @@
       
       <p><strong>Old Link</strong> <span id="origin_link">{{ origin_link }}</span></p>
       <p><strong>New Link</strong>  
-        <a href="/{{ short_link }}" target="_blank" id="short_link">http://127.0.0.1:5000//{{ short_link }}</a>
+        <a href="/{{ short_link }}" target="_blank" id="short_link">http://yourappdomain//{{ short_link }}</a>
       </p>
 
       <div class="d-flex gap-2">
-        <a href="/{{ short_link }}" target="_blank" class="btn btn-success btn-sm">Menuju Link</a>
+        <a href="/{{ short_link }}" target="_blank" class="btn btn-success btn-sm">Go to link</a>
         <button class="btn btn-outline-secondary btn-sm"
           onclick="navigator.clipboard.writeText('https://yourdomain.com/{{ short_link }}')">
           Copy ke Clipboard
@@ -101,7 +101,7 @@
     </svg>
 
     <footer>
-        &copy; 2025 DisposeLink
+        &copy; 2025 Shortenlink
     </footer>
 
     <!-- SCRIPTS -->
