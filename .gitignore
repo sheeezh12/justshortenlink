@@ -1,0 +1,20 @@
+# Python cache & compiled files
+__pycache__/
+*.pyc
+*.pyo
+
+# Env & secrets
+.env
+venv/
+*.sqlite
+instance/
+
+# Editor/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Flask data files
+db/*.json
+*.log

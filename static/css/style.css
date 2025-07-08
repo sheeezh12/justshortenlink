@@ -1,47 +1,47 @@
 :root {
-    --bg-primary: #F9FAFC;
-    --text-primary: #1C1C1E;
-    --text-muted: #7A7A8C;
-    --accent: #5F6FFF;
-    --accent-alt: #FF8FAB;
-    --button-hover: #4950FF;
-    --border: #E3E4EB;
+  --bg-primary: #F9FAFC;
+  --text-primary: #1C1C1E;
+  --text-muted: #7A7A8C;
+  --accent: #5F6FFF;
+  --accent-alt: #FF8FAB;
+  --button-hover: #4950FF;
+  --border: #E3E4EB;
 }
 
+/* Base styling */
 body {
-   
-    font-family: 'Segoe UI', sans-serif;
-    color: var(--text-primary);
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
 }
 
 header, section, footer {
-    padding: 4rem 2rem;
-    margin: auto;
+  padding: 4rem 2rem;
+  margin: auto;
+ 
 }
 
 section {
     max-width: 960px;
 }
-
+/* HEADER */
 header {
-    text-align: center;
-    background-color: var(--accent-alt);
-    padding-top: 100px;
-    padding-bottom: 100px;
-    color: var(--text-primary);
+  text-align: center;
+  background-color: var(--accent-alt);
+  padding: 100px 2rem;
+  color: var(--text-primary);
 }
 
 header h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    letter-spacing: -0.5px;
-    line-height: 1.2;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
 }
 
 header p {
-    color: var(--text-primary);
-    font-size: 1.25rem;
-    font-weight: 500;
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
 header::after {
@@ -54,58 +54,26 @@ header::after {
   border-radius: 2px;
 }
 
-#cara-kerja {
-    padding-top: 10px;
-}
-
+/* SECTION TITLES */
 #cara-kerja h2,
 #shorten-part h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
+/* LIST INSTRUCTIONS */
 #cara-kerja ul {
-    list-style: none;
-    padding: 0;
-    color: var(--text-muted);
+  list-style: none;
+  padding: 0;
+  color: var(--text-muted);
 }
 
 #cara-kerja li::before {
-    content: "✔️ ";
-    color: var(--accent);
+  content: "✔️ ";
+  color: var(--accent);
 }
 
-#shorten-part input {
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 1rem;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    margin-bottom: 1rem;
-}
-
-#shorten-part button {
-    padding: 0.8rem 1.2rem;
-    font-size: 1rem;
-    background-color: var(--accent);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    transform: translateY(0);
-
-}
-
-#shorten-part button:hover {
-    transform: translateY(-2px);
-    background-color: var(--button-hover);
-}
-
-#shorten-part i {
-    margin-right: 0.5rem;
-}
-
+/* SHORTEN LINK SECTION */
 #shorten-part {
   background-color: white;
   padding: 2rem;
@@ -114,17 +82,89 @@ header::after {
   border: 1px solid var(--border);
 }
 
-#shorten-part input:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(95, 111, 255, 0.15);
+/* INPUT FIELDS */
+input.form-control {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid rgb(5, 5, 5);
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 1rem;
+  background-color: transparent;
 }
 
+input.form-control:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border-color: var(--accent);
+}
+
+/* PLACEHOLDER EFFECT */
+input::placeholder {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+input:focus::placeholder {
+  opacity: 0.2;
+}
+
+/* BUTTON */
+#shorten-part button {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transform: translateY(0);
+}
+
+#shorten-part button:hover {
+  transform: translateY(-2px);
+  background-color: var(--button-hover);
+}
+
+#shorten-part i {
+  margin-right: 0.5rem;
+}
+
+/* FOOTER */
 footer {
-    text-align: center;
-    font-size: 0.95rem;
-    color: var(--text-primary);
-    background-color: var(--accent-alt);
-    padding: 2.5rem 1rem;
-   
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  background-color: var(--accent-alt);
+  padding: 2.5rem 1rem;
+}
+
+/* ICONS & PICKER UI */
+.input-group-text {
+  background-color: #fff !important;
+  border: none !important;
+  cursor: pointer;
+}
+
+i.fa.fa-calendar,
+i.bi.bi-clock {
+  font-size: large;
+  padding: 4px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+/* DATEPICKER UI */
+.datepicker {
+  z-index: 1050;
+  border: 1px solid var(--text-primary);
+  font-size: 14px;
+  text-align: center;
+}
+
+#link_result a {
+  word-break: break-all;
 }
